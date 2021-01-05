@@ -2,6 +2,9 @@
 
 # TypingLabel
 
+## About the fork
+This fork frees the awesome TypingLabel from being confined into Scene2D. You can now draw animated text with SpriteBatch anywhere you want.
+
 [![Maven Central](https://img.shields.io/maven-central/v/com.rafaskoberg.gdx/typing-label.svg?colorB=43BD15)](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22typing-label%22)
 [![license](https://img.shields.io/github/license/rafaskb/typing-label.svg)](https://github.com/rafaskb/typing-label/blob/master/LICENSE)
 
@@ -10,7 +13,6 @@ A libGDX Label that appears as if it was being typed in real time.
 It works as a drop-in replacement for normal [Scene2D Labels](https://github.com/libgdx/libgdx/wiki/Scene2d.ui#label), and you can use optional [tokens](https://github.com/rafaskb/typing-label/wiki/Tokens) to customize the text's behavior.
 
 ![Sample GIF](media/sample.gif)
-
 
 ## Installation
 
