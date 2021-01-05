@@ -12,7 +12,7 @@ import regexodus.Matcher;
 import regexodus.Pattern;
 import regexodus.REFlags;
 
-/** Utility class to parse tokens from a {@link TypingLabel}. */
+/** Utility class to parse tokens from a {@link TypingLabelGeneric}. */
 class Parser {
     private static final Pattern PATTERN_MARKUP_STRIP      = Pattern.compile("(\\[{2})|(\\[#?\\w*(\\[|\\])?)");
     private static final Pattern PATTERN_COLOR_HEX_NO_HASH = Pattern.compile("[A-F0-9]{6}");
@@ -24,8 +24,8 @@ class Parser {
     private static Pattern PATTERN_TOKEN_STRIP;
     private static String  RESET_REPLACEMENT;
 
-    /** Parses all tokens from the given {@link TypingLabel}. */
-    static void parseTokens(TypingLabel label) {
+    /** Parses all tokens from the given {@link TypingLabelGeneric}. */
+    static void parseTokens(TypingLabelGeneric label) {
         // Compile patterns if necessary
         if(PATTERN_TOKEN_STRIP == null || TypingConfig.dirtyEffectMaps) {
             PATTERN_TOKEN_STRIP = compileTokenPattern();
@@ -55,7 +55,7 @@ class Parser {
     }
 
     /** Parse tokens that only replace text, such as colors and variables. */
-    private static void parseReplacements(TypingLabel label) {
+    private static void parseReplacements(TypingLabelGeneric label) {
         // Get text
         CharSequence text = label.getText();
         boolean hasMarkup = label.getBitmapFontCache().getFont().getData().markupEnabled;
@@ -134,8 +134,8 @@ class Parser {
         label.setText(text, false, false);
     }
 
-    /** Parses regular tokens that don't need replacement and register their indexes in the {@link TypingLabel}. */
-    private static void parseRegularTokens(TypingLabel label) {
+    /** Parses regular tokens that don't need replacement and register their indexes in the {@link TypingLabelGeneric}. */
+    private static void parseRegularTokens(TypingLabelGeneric label) {
         // Get text
         CharSequence text = label.getText();
 
@@ -261,7 +261,7 @@ class Parser {
     }
 
     /** Parse color markup tags and register SKIP tokens. */
-    private static void parseColorMarkups(TypingLabel label) {
+    private static void parseColorMarkups(TypingLabelGeneric label) {
         // Get text
         final CharSequence text = label.getText();
 

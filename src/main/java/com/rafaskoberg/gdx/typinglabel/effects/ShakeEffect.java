@@ -1,13 +1,12 @@
 
 package com.rafaskoberg.gdx.typinglabel.effects;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.Glyph;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.FloatArray;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Shakes the text in a random pattern. */
 public class ShakeEffect extends Effect {
@@ -19,7 +18,7 @@ public class ShakeEffect extends Effect {
     private float distance  = 1; // How far the glyphs should move
     private float intensity = 1; // How fast the glyphs should move
 
-    public ShakeEffect(TypingLabel label, String[] params) {
+    public ShakeEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Distance

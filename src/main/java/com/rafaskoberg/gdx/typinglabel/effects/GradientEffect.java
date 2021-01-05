@@ -4,7 +4,7 @@ package com.rafaskoberg.gdx.typinglabel.effects;
 import com.badlogic.gdx.graphics.Color;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Tints the text in a gradient pattern. */
 public class GradientEffect extends Effect {
@@ -16,7 +16,7 @@ public class GradientEffect extends Effect {
     private float distance  = 1; // How extensive the rainbow effect should be.
     private float frequency = 1; // How frequently the color pattern should move through the text.
 
-    public GradientEffect(TypingLabel label, String[] params) {
+    public GradientEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Color 1

@@ -24,9 +24,9 @@ public interface TypingListener {
      *                 the variable will be <tt>townName</tt>
      * @return The replacement String, or {@code null} if this method should be ignored and the regular values should be
      * used instead.
-     * @see TypingLabel#setVariable(String, String)
-     * @see TypingLabel#setVariables(java.util.Map)
-     * @see TypingLabel#setVariables(com.badlogic.gdx.utils.ObjectMap)
+     * @see TypingLabelGeneric#setVariable(String, String)
+     * @see TypingLabelGeneric#setVariables(java.util.Map)
+     * @see TypingLabelGeneric#setVariables(com.badlogic.gdx.utils.ObjectMap)
      */
     public String replaceVariable(String variable);
 

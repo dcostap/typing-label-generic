@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Blinks the entire text in two different colors at once, without interpolation. */
 public class BlinkEffect extends Effect {
@@ -16,7 +16,7 @@ public class BlinkEffect extends Effect {
     private float frequency = 1; // How frequently the color pattern should move through the text.
     private float threshold = 0.5f; // Point to switch colors.
 
-    public BlinkEffect(TypingLabel label, String[] params) {
+    public BlinkEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Color 1

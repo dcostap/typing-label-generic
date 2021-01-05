@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.IntFloatMap;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Moves the text horizontally easing it into the final position. Doesn't repeat itself. */
 public class SlideEffect extends Effect {
@@ -19,7 +19,7 @@ public class SlideEffect extends Effect {
 
     private IntFloatMap timePassedByGlyphIndex = new IntFloatMap();
 
-    public SlideEffect(TypingLabel label, String[] params) {
+    public SlideEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Distance

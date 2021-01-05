@@ -20,7 +20,7 @@ import com.badlogic.gdx.utils.reflect.ClassReflection;
  * An extension of {@link Label} that progressively shows the text as if it was being typed in real time, and allows the
  * use of tokens in the following format: <tt>{TOKEN=PARAMETER}</tt>.
  */
-public class TypingLabel {
+public class TypingLabelGeneric {
 	///////////////////////
 	/// --- Members --- ///
 	///////////////////////
@@ -81,7 +81,7 @@ public class TypingLabel {
 	/// --- Constructors --- ///
 	////////////////////////////
 
-	public TypingLabel(CharSequence text, BitmapFont font, Color fontColor) {
+	public TypingLabelGeneric(CharSequence text, BitmapFont font, Color fontColor) {
 		this.font = font;
 		this.fontColor = fontColor;
 		if (text != null) this.text.append(text);

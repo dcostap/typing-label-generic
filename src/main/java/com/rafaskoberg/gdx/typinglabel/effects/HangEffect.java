@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.IntFloatMap;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Hangs the text in midair and suddenly drops it. Doesn't repeat itself. */
 public class HangEffect extends Effect {
@@ -18,7 +18,7 @@ public class HangEffect extends Effect {
 
     private IntFloatMap timePassedByGlyphIndex = new IntFloatMap();
 
-    public HangEffect(TypingLabel label, String[] params) {
+    public HangEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Distance

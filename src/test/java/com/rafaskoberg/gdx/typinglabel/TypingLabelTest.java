@@ -8,24 +8,14 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Interpolation;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Cell;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-
-import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
 
 public class TypingLabelTest extends ApplicationAdapter {
 	Skin skin;
 	SpriteBatch batch;
-	TypingLabel label;
+	TypingLabelGeneric label;
 	Viewport viewport = new ScreenViewport();
 
 	@Override
@@ -55,7 +45,7 @@ public class TypingLabelTest extends ApplicationAdapter {
 		TypingConfig.GLOBAL_VARS.put("FIRE_WIND", "{FASTER}{GRADIENT=ORANGE;DB6600;-0.5;5}{SLOWER}{WIND=2;4;0.5;0.5}");
 	}
 
-	public TypingLabel createTypingLabel() {
+	public TypingLabelGeneric createTypingLabel() {
 		// Create text with tokens
 		final StringBuilder text = new StringBuilder();
 		text.append("{WAIT=1}{SLOWER}{GRADIENT=FF70F1;FFC300;-0.5;5}{EASE=-8;2;1}Welcome,{WAIT} {VAR=title}!{ENDEASE}");
@@ -72,7 +62,7 @@ public class TypingLabelTest extends ApplicationAdapter {
 		text.append("{VAR=FIRE_WIND}Imagine the possibilities! =D {RESET}\n");
 
 		// Create label
-		final TypingLabel label = new TypingLabel(text, skin.getFont("default-font"), Color.WHITE);
+		final TypingLabelGeneric label = new TypingLabelGeneric(text, skin.getFont("default-font"), Color.WHITE);
 		label.setDefaultToken("{EASE}{FADE=0;1;0.33}");
 
 		// Make the label wrap to new lines, respecting the table's layout.

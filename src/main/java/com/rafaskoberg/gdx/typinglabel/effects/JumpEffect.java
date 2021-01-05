@@ -1,11 +1,10 @@
 
 package com.rafaskoberg.gdx.typinglabel.effects;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.Glyph;
 import com.badlogic.gdx.math.Interpolation;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Makes the text jumps and falls as if there was gravity. */
 public class JumpEffect extends Effect {
@@ -17,7 +16,7 @@ public class JumpEffect extends Effect {
     private float frequency = 1; // How frequently the wave pattern repeats
     private float intensity = 1; // How fast the glyphs should move
 
-    public JumpEffect(TypingLabel label, String[] params) {
+    public JumpEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Distance

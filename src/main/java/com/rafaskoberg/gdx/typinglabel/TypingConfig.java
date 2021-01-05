@@ -22,7 +22,7 @@ public class TypingConfig {
 
     /**
      * Whether or not <a href="https://github.com/libgdx/libgdx/wiki/Color-Markup-Language">LibGDX's Color Markup
-     * Language</a> should be enabled when parsing a {@link TypingLabel}. Note that this library doesn't truly handle
+     * Language</a> should be enabled when parsing a {@link TypingLabelGeneric}. Note that this library doesn't truly handle
      * colors, but simply convert them to the markup format. If markup is disabled, color tokens will be ignored.
      */
     public static boolean FORCE_COLOR_MARKUP_BY_DEFAULT = true;
@@ -51,7 +51,7 @@ public class TypingConfig {
      */
     public static int CHAR_LIMIT_PER_FRAME = -1;
 
-    /** Default color for the {@code CLEARCOLOR} token. Can be overriden by {@link TypingLabel#getClearColor()}. */
+    /** Default color for the {@code CLEARCOLOR} token. Can be overriden by {@link TypingLabelGeneric#getClearColor()}. */
     public static Color DEFAULT_CLEAR_COLOR = new Color(Color.WHITE);
 
     /**
@@ -60,7 +60,7 @@ public class TypingConfig {
      */
     public static ObjectFloatMap<Character> INTERVAL_MULTIPLIERS_BY_CHAR = new ObjectFloatMap<Character>();
 
-    /** Map of global variables that affect all {@link TypingLabel} instances at once. */
+    /** Map of global variables that affect all {@link TypingLabelGeneric} instances at once. */
     public static final ObjectMap<String, String> GLOBAL_VARS = new ObjectMap<>();
 
     /** Map of start tokens and their effect classes. Internal use only. */

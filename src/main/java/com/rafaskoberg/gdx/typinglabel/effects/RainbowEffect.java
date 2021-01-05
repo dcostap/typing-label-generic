@@ -4,7 +4,7 @@ package com.rafaskoberg.gdx.typinglabel.effects;
 import com.badlogic.gdx.graphics.Color;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 import com.rafaskoberg.gdx.typinglabel.utils.ColorUtils;
 
 /** Tints the text in a rainbow pattern. */
@@ -17,7 +17,7 @@ public class RainbowEffect extends Effect {
     private float saturation = 1; // Color saturation
     private float brightness = 1; // Color brightness
 
-    public RainbowEffect(TypingLabel label, String[] params) {
+    public RainbowEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Distance

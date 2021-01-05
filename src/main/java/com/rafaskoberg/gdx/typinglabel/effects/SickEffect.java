@@ -1,12 +1,11 @@
 
 package com.rafaskoberg.gdx.typinglabel.effects;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.Glyph;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.utils.IntArray;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Drips the text in a random pattern. */
 public class SickEffect extends Effect {
@@ -19,7 +18,7 @@ public class SickEffect extends Effect {
 
     private IntArray indices = new IntArray();
 
-    public SickEffect(TypingLabel label, String[] params) {
+    public SickEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Distance

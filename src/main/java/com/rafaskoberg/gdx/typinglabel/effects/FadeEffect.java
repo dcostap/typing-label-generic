@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.IntFloatMap;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Fades the text's color from between colors or alphas. Doesn't repeat itself. */
 public class FadeEffect extends Effect {
@@ -18,7 +18,7 @@ public class FadeEffect extends Effect {
 
     private IntFloatMap timePassedByGlyphIndex = new IntFloatMap();
 
-    public FadeEffect(TypingLabel label, String[] params) {
+    public FadeEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Color 1 or Alpha 1

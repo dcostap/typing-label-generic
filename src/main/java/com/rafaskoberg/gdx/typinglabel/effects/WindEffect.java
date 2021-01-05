@@ -3,7 +3,7 @@ package com.rafaskoberg.gdx.typinglabel.effects;
 
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 import com.rafaskoberg.gdx.typinglabel.utils.SimplexNoise;
 
 /** Moves the text in a wind pattern. */
@@ -24,7 +24,7 @@ public class WindEffect extends Effect {
     private float spacing   = 1; // How much space there should be between waves
     private float intensity = 1; // How strong the wind should be
 
-    public WindEffect(TypingLabel label, String[] params) {
+    public WindEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Distance X

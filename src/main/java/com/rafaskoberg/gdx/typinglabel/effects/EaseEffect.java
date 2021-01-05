@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.IntFloatMap;
 import com.rafaskoberg.gdx.typinglabel.Effect;
 import com.rafaskoberg.gdx.typinglabel.TypingGlyph;
-import com.rafaskoberg.gdx.typinglabel.TypingLabel;
+import com.rafaskoberg.gdx.typinglabel.TypingLabelGeneric;
 
 /** Moves the text vertically easing it into the final position. Doesn't repeat itself. */
 public class EaseEffect extends Effect {
@@ -19,7 +19,7 @@ public class EaseEffect extends Effect {
 
     private IntFloatMap timePassedByGlyphIndex = new IntFloatMap();
 
-    public EaseEffect(TypingLabel label, String[] params) {
+    public EaseEffect(TypingLabelGeneric label, String[] params) {
         super(label);
 
         // Distance

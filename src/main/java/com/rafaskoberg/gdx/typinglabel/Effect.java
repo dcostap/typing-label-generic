@@ -8,13 +8,13 @@ import com.badlogic.gdx.math.MathUtils;
 /** Abstract text effect. */
 public abstract class Effect {
     private static final float       FADEOUT_SPLIT = 0.25f;
-    protected final      TypingLabel label;
+    protected final TypingLabelGeneric label;
     public               int         indexStart    = -1;
     public               int         indexEnd      = -1;
     public               float       duration      = Float.POSITIVE_INFINITY;
     protected            float       totalTime;
 
-    public Effect(TypingLabel label) {
+    public Effect(TypingLabelGeneric label) {
         this.label = label;
     }
 
