@@ -867,6 +867,11 @@ public class TypingLabelGeneric {
 	static private final Color tempColor = new Color();
 
 	public void draw(Batch batch, int x, int y, Color color) {
+		prepareCacheForDrawing(x, y, color).draw(batch);
+	}
+
+	/** Prepares the {@link BitmapFontCache} but doesn't draw anything **/
+	public BitmapFontCache prepareCacheForDrawing(int x, int y, Color color) {
 		addMissingGlyphs();
 
 		// Update cache with new glyphs
@@ -884,7 +889,7 @@ public class TypingLabelGeneric {
 		if (fontColor != null) finalColor.mul(fontColor);
 		cache.tint(finalColor);
 		cache.setPosition(x, y);
-		cache.draw(batch);
+		return cache;
 	}
 
 	public int getWidth() {
