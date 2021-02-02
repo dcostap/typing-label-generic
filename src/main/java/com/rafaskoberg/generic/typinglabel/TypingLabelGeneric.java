@@ -865,12 +865,12 @@ public class TypingLabelGeneric {
 
 	static private final Color tempColor = new Color();
 
-	public void draw(Batch batch, int x, int y, Color color) {
+	public void draw(Batch batch, float x, float y, Color color) {
 		prepareCacheForDrawing(x, y, color).draw(batch);
 	}
 
 	/** Prepares the {@link BitmapFontCache} but doesn't draw anything **/
-	public BitmapFontCache prepareCacheForDrawing(int x, int y, Color color) {
+	public BitmapFontCache prepareCacheForDrawing(float x, float y, Color color) {
 		addMissingGlyphs();
 
 		// Update cache with new glyphs
